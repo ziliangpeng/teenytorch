@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.21.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "teenytorch"
+version = "0.0.0"
+description = "A tiny PyTorch utilities library."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Your Name", email = "you@example.com" },
+]
+keywords = ["pytorch", "deep-learning", "utilities"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourname/ttorch"
+Repository = "https://github.com/yourname/ttorch"
+Issues = "https://github.com/yourname/ttorch/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.5",
+  "mypy>=1.10",
+]
+test = [
+  "pytest>=8.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["teenytorch"]
+
+[tool.hatch.version]
+path = "teenytorch/__about__.py"
+
